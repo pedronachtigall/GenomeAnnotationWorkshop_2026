@@ -43,3 +43,24 @@ This genome has 18 chromosomes, but we will use two chromosomes containing two t
 
 SVMPs and PLA2 are genes detected in tandem arrays (ranging from 2 to 36 copies) in the genome of vipers and represent regions hard to annotate due to similarity of paralogs and the distance between genes. These duplications usually are accompanied by repetitive regions, which usually add another layer of complexity on the genome annotation process.
 
+
+<!---
+
+
+EVERYTHING IN THE COMMENT IS BEING HERE FOR FURTHER USE AND NEED ADJUSTMENTS
+
+### Repeat annotation
+The repeat annotation was performed using [RepeatModeler2](https://github.com/Dfam-consortium/RepeatModeler), to generate a *de novo* species-specific library, and [RepeatMasker](https://github.com/Dfam-consortium/RepeatMasker), to perform the annotation. We complement the species-specific TE library using a curated TE library of snakes previously published <sup>[Castoe et al., 2013](https://doi.org/10.1073/pnas.1314475110)</sup>.
+
+The pipeline with commands and scripts used to perform the repeat annotation is well described in the following tutorial: https://github.com/pedronachtigall/Repeat-annotation-pipeline
+
+
+<details>
+<summary>Expand "Transcriptome Assembly" Section</summary>
+
+</details>
+<br>
+
+
+-->
+
