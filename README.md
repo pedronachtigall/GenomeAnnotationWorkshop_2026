@@ -14,4 +14,13 @@ By the end of this course, you will be able to:
 5. **Manually inspect complex genomic regions** to ensure a comprehensive and accurate annotation of genomic regions that are error-prone.
 
 
+## 🛠️ Prerequisites & Software Environment
 
+| Category | Tools Used |
+| :--- | :--- |
+| **Repeat Masking** | `RepeatModeler`, `RepeatMasker` |
+| **Read Alignment** | `HISAT2`, `SAMtools` |
+| **Structural Annotation** | `GALBA`, `Tiberius`, `ToxCodAn-Genome` |
+| **Functional Annotation** | `eggNOG-mapper`, `InterProScan` |
+| **Quality Control & Stats** | `BUSCO`, `AGAT`, `IGV` (for visualization) |
+| **Visualization** | `IGV` (open-source), `JBrowse` (open-source), `Geneious` (paid) |
