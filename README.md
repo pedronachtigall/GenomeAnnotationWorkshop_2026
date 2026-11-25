@@ -2,7 +2,7 @@
 
 Welcome to the **Annotating genomes: the first step to gather biological meaning from genomic data** course! In this hands-on workshop, you will learn how to take a raw *de novo* genome assembly and transform it into a biologically meaningful resource by identifying repetitive elements, predicting protein-coding genes, assigning functional annotations, and assessing annotation quality.
 
-This workshop was part of the 5th Oslo Bioinformatics Workshop Week, which took place from December 7 to December 11, 2026 at *Livsvitenskapsbygningen* (LVB; *The Life Science Building*), University of Oslo. The workshops were open to the scientific community in Oslo and the surrounding area.
+This workshop was part of the [5th Oslo Bioinformatics Workshop Week](https://www.mn.uio.no/bils/english/events/oslo-bioinfomatics-week/oslo-bioinformatics-workshop-week-2026/), which took place from December 7 to December 11, 2026 at *Livsvitenskapsbygningen* (LVB; *The Life Science Building*), University of Oslo. The workshops were open to the scientific community in Oslo and the surrounding area.
 
 ## 🎯 Learning Objectives
 
@@ -31,5 +31,7 @@ We will use the Golden lancehead (*Bothrops insularis*) as a model for this tuto
 
 This genome is publicly available in the NCBI ([PRJNA679826](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA679826/)) and [figshare](https://figshare.com/projects/Bothrops_insularis_genome/237995) repositories.
 
-This genome has 18 chromosomes, but we will use two chromosomes containing two toxin families that are classified as major venom components and hard to annotate. Specifically, we will use chromosomes mi-1 and mi-4 that contains the toxin families snake venom metalloproteinase (SVMP) and phospholipase A2 (PLA2), respectively.
+This genome has 18 chromosomes, but we will use two chromosomes containing two toxin families that are classified as major venom components and hard to annotate. Specifically, we will use chromosomes mi-1 and mi-4 that contains the toxin families snake venom metalloproteinase (SVMP) and phospholipase A2 (PLA2), respectively. 
+
+SVMPs and PLA2 are genes detected in tandem arrays (ranging from 2 to 36 copies) in the genome of vipers and represent regions hard to annotate due to similarity of paralogs and the distance between genes. These duplications usually are accompanied by repetitive regions, which usually add another layer of complexity on the genome annotation process.
 
