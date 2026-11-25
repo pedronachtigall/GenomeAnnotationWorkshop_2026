@@ -1,4 +1,12 @@
+<div align="center">
+<center>
+
+![GA_workshop_logo](/figs/GA_workshop_logo.png)
+
 # Annotating genomes: the first step to gather biological meaning from genomic data
+
+</center>
+</div>
 
 Welcome to the **Annotating genomes: the first step to gather biological meaning from genomic data** course! In this hands-on workshop, you will learn how to take a raw *de novo* genome assembly and transform it into a biologically meaningful resource by identifying repetitive elements, predicting protein-coding genes, assigning functional annotations, and assessing annotation quality.
 
