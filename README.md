@@ -41,8 +41,23 @@ This genome is publicly available in the NCBI ([PRJNA679826](https://www.ncbi.nl
 
 This genome has 18 chromosomes, but we will use two chromosomes containing two toxin families that are classified as major venom components and hard to annotate. Specifically, we will use chromosomes mi-1 and mi-4 that contains the toxin families snake venom metalloproteinase (SVMP) and phospholipase A2 (PLA2), respectively. 
 
-SVMPs and PLA2 are genes detected in tandem arrays (ranging from 2 to 36 copies) in the genome of vipers and represent regions hard to annotate due to similarity of paralogs and the distance between genes. These duplications usually are accompanied by repetitive regions, which usually add another layer of complexity on the genome annotation process.
+SVMPs and PLA2s are genes detected in tandem arrays (ranging from 2 to 36 copies) in the genome of vipers and represent regions hard to annotate due to similarity of paralogs and the distance between genes. These duplications usually are accompanied by repetitive regions, which usually add another layer of complexity on the genome annotation process.
 
+To make it easier for the workshop, most files were previously subset and are in the subdirectory named "data" as follow:
+```text
+GenomeAnnotationWorkshop_2026/
+├── data/
+    ├── assembly/               # Input genome assembly (.fasta)
+    |   └── genome.fasta
+    ├── rnaseq/                 # Paired-end RNA-seq reads (.fastq.gz)
+    |   ├── VG_R1.fastq.gz
+    |   ├── VG_R2.fastq.gz
+    |   ├── Liver_R1.fastq.gz
+    |   └── Liver_R2.fastq.gz
+    └── proteins/               # Reference protein database (.fasta)
+        └── protein.fasta
+```
+ - The data is based on real sources and it was subset for teaching reasons. Remember that it is not completed. 
 
 <!---
 
