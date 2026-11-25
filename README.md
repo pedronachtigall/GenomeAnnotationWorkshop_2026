@@ -22,5 +22,14 @@ By the end of this course, you will be able to:
 | **Read Alignment** | `HISAT2`, `SAMtools` |
 | **Structural Annotation** | `GALBA`, `Tiberius`, `ToxCodAn-Genome` |
 | **Functional Annotation** | `eggNOG-mapper`, `InterProScan` |
-| **Quality Control & Stats** | `BUSCO`, `AGAT`, `IGV` (for visualization) |
+| **Quality Control & Stats** | `BUSCO`, `AGAT` |
 | **Visualization** | `IGV` (open-source), `JBrowse` (open-source), `Geneious` (paid) |
+
+
+## Study case
+We will use the Golden lancehead (*Bothrops insularis*) as a model for this tutorial ([Nachtigall et al., 2026](https://doi.org/10.1093/gbe/evaf243)). This species is a venomous snake and has venom genes that comprise complex genomic regions, which suits well as a study case manually inspect gene annotation.
+
+This genome is publicly available in the NCBI ([PRJNA679826](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA679826/)) and [figshare](https://figshare.com/projects/Bothrops_insularis_genome/237995) repositories.
+
+This genome has 18 chromosomes, but we will use two chromosomes containing two toxin families that are classified as major venom components and hard to annotate. Specifically, we will use chromosomes mi-1 and mi-4 that contains the toxin families snake venom metalloproteinase (SVMP) and phospholipase A2 (PLA2), respectively.
+
