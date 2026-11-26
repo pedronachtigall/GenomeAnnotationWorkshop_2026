@@ -37,13 +37,13 @@ By the end of this course, you will be able to:
 Note: most tools are open-source and freely available.
 
 ## 🐍 Case study - Venom gene annotation of *Bothrops insularis*
-We will use the Golden lancehead (*Bothrops insularis*) as a model for this tutorial ([Nachtigall et al., 2026](https://doi.org/10.1093/gbe/evaf243)). This species is a venomous snake and has venom genes that comprise complex genomic regions, which suits well as a study case to manually inspect gene annotation.
+We will use the Golden lancehead (*Bothrops insularis*) as a model for this tutorial ([Nachtigall et al., 2026](https://doi.org/10.1093/gbe/evaf243)). This species is a venomous snake and has venom genes that comprise complex genomic regions, which suits well as a case study to manually inspect gene annotation.
 
 This genome is publicly available in the NCBI ([PRJNA679826](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA679826/)) and [figshare](https://figshare.com/projects/Bothrops_insularis_genome/237995) repositories.
 
 This genome has 18 chromosomes, but we will use two chromosomes containing two toxin families that are classified as major venom components and hard to annotate. Specifically, we will use chromosomes mi-1 and mi-4 that contains the toxin families snake venom metalloproteinase (SVMP) and phospholipase A2 (PLA2), respectively. 
 
-SVMPs and PLA2s are genes detected in tandem arrays (ranging from 2 to 36 copies) in the genome of vipers and represent regions hard to annotate due to similarity of paralogs and the distance between genes. These duplications usually are accompanied by repetitive regions, which usually add another layer of complexity on the genome annotation process.
+SVMPs and PLA2s are gene families detected in tandem arrays (ranging from 2 to 36 copies side-by-side) in the genome of vipers and represent regions hard to annotate due to high similarity of paralog copies and close physical distance between genes. These duplications usually are accompanied by repetitive regions, which adds another layer of complexity on the genome annotation process.
 
 To make it easier for the workshop, most files were previously subset and are in the subdirectory named "data" as follow:
 ```text
