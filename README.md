@@ -36,7 +36,7 @@ By the end of this course, you will be able to:
 
 Note: most tools are open-source and freely available.
 
-## 🐍 Study case
+## 🐍 Case study - Venom gene annotation of *Bothrops insularis*
 We will use the Golden lancehead (*Bothrops insularis*) as a model for this tutorial ([Nachtigall et al., 2026](https://doi.org/10.1093/gbe/evaf243)). This species is a venomous snake and has venom genes that comprise complex genomic regions, which suits well as a study case to manually inspect gene annotation.
 
 This genome is publicly available in the NCBI ([PRJNA679826](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA679826/)) and [figshare](https://figshare.com/projects/Bothrops_insularis_genome/237995) repositories.
@@ -67,8 +67,8 @@ GenomeAnnotationWorkshop_2026/
 
 ## Getting started
 
-## Repeat annotation
-The repeat annotation identify repetitive DNA, such as transposons and simple repeats, that can inflate substantially the number of false positives in the gene annotation step because repetitive elements often mimic coding signals or attract misleading sequence alignments. To handle such issue, we can soft-mask the genome by indicating repetitive regions with lower case. It allow gene annotation tools to take into account repetitive sequences without losing real coding regions. Soft-masking a genome means to lower case letters that represent repetitive sequences (see the example below). But to soft-mask a genome, we first need to identify the repetitive regions through a step known as repeat annotation.
+### Repeat annotation
+The repeat annotation identify repetitive DNA, such as transposons and simple repeats, that can inflate substantially the number of false positives in the gene annotation step because repetitive elements often mimic coding signals or attract misleading sequence alignments. To handle such issue, we can soft-mask the genome by indicating repetitive regions with lower case. It allow gene annotation tools to take into account repetitive sequences without losing real coding regions. Soft-masking a genome means to lower case letters that represent repetitive sequences (see the example below). To soft-mask a genome, we first need to identify the repetitive regions through a step known as repeat annotation.
 
 ```
 # genome
@@ -108,6 +108,22 @@ RepeatMasker -pa 20 -gff -s -a -inv -no_is -norna -xsmall -nolow -div 40 -lib Bi
 
 A complete pipeline with commands and scripts used to perform the repeat annotation is well described in the following tutorial: [https://github.com/pedronachtigall/Repeat-annotation-pipeline](https://github.com/pedronachtigall/Repeat-annotation-pipeline)
 
+
+
+### Gene annotation
+
+#### *ab initio*
+
+Using Tiberius
+
+#### evidence-based
+
+Using GALBA
+
+#### ToxCodAn-Genome
+In our case study, we aim to have a comprehensive and accurate annotation of venom genes. Then, we can take advantage of [ToxCodAn-Genome](https://github.com/pedronachtigall/ToxCodAn-Genome), which is a tool designed specifically to handle the issues related to venom gene annotation ([Nachtigall et al., 2024](https://doi.org/10.1093/gigascience/giad116)).
+
+### Manual inspection of complex regions
 
 
 
