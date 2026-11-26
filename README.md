@@ -31,11 +31,13 @@ By the end of this course, you will be able to:
 | **Structural Annotation** | `GALBA`, `Tiberius`, `ToxCodAn-Genome` |
 | **Functional Annotation** | `eggNOG-mapper`, `InterProScan` |
 | **Quality Control & Stats** | `BUSCO`, `AGAT` |
-| **Visualization** | `IGV` (open-source), `JBrowse` (open-source), `Geneious` (paid) |
+| **Visualization** | `IGV`, `JBrowse`, `Geneious` (paid) |
+| **Misc** | `BEDtools`, `GFFread`, `miniprot`, `BLAST`, `seqkit` |
 
+Note: most tools are open-source and freely available.
 
-## Study case
-We will use the Golden lancehead (*Bothrops insularis*) as a model for this tutorial ([Nachtigall et al., 2026](https://doi.org/10.1093/gbe/evaf243)). This species is a venomous snake and has venom genes that comprise complex genomic regions, which suits well as a study case manually inspect gene annotation.
+## 🐍 Study case
+We will use the Golden lancehead (*Bothrops insularis*) as a model for this tutorial ([Nachtigall et al., 2026](https://doi.org/10.1093/gbe/evaf243)). This species is a venomous snake and has venom genes that comprise complex genomic regions, which suits well as a study case to manually inspect gene annotation.
 
 This genome is publicly available in the NCBI ([PRJNA679826](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA679826/)) and [figshare](https://figshare.com/projects/Bothrops_insularis_genome/237995) repositories.
 
@@ -62,15 +64,47 @@ GenomeAnnotationWorkshop_2026/
 ```
  - The data is based on real sources and it was subset for teaching reasons. Remember that it is not completed. 
 
+
+## Getting started
+
+## Repeat annotation
+The repeat annotation can be performed using [RepeatModeler2](https://github.com/Dfam-consortium/RepeatModeler), to generate a *de novo* species-specific library, and [RepeatMasker](https://github.com/Dfam-consortium/RepeatMasker), to perform the annotation. We can complement the species-specific TE library using a curated TE library of snakes previously published ([Castoe et al., 2013](https://doi.org/10.1073/pnas.1314475110)).
+
+This step can take a while. To make it our life easier for the workshop, we have made the soft-masked genome available in the data subdirectory. But you can give it a try by expanding the section.
+
+<details>
+<summary>Expand "Repeat masking" </summary>
+
+```
+# run repeatmodeler
+BuildDatabase -name Bothrops_insularis -engine ncbi genomes.fasta
+RepeatModeler -pa 20 -engine ncbi -database Bothrops_insularis
+
+# add a prefix
+cat Bothrops_insularis-families.fa | seqkit fx2tab | awk '{ print "Binsularis_"$0 }' | seqkit tab2fx > Bothrops_insularis-families.prefix.fa
+
+# download the snakes TE set available and merge to the species-specific library
+wget https://raw.githubusercontent.com/pedronachtigall/Repeat-annotation-pipeline/refs/heads/main/TElibs/BovB_CR1_TElib.fasta
+wget https://raw.githubusercontent.com/pedronachtigall/Repeat-annotation-pipeline/refs/heads/main/TElibs/Boa_Snakes_Known_TElib_CLEAN.fasta
+cat Bothrops_insularis-families.prefix.fa BovB_CR1_TElib.fasta Boa_Snakes_Known_TElib_CLEAN.fasta > Binsu_curated_TElib.fasta
+
+#run repeatmasker
+RepeatMasker -pa 20 -gff -s -a -inv -no_is -norna -xsmall -nolow -div 40 -lib Binsu_curated_TElib.fasta -cutoff 225 genome.fasta
+
+```
+
+</details>
+<br>
+
+A complete pipeline with commands and scripts used to perform the repeat annotation is well described in the following tutorial: [https://github.com/pedronachtigall/Repeat-annotation-pipeline](https://github.com/pedronachtigall/Repeat-annotation-pipeline)
+
+
+
+
 <!---
 
 
 EVERYTHING IN THE COMMENT IS BEING HERE FOR FURTHER USE AND NEED ADJUSTMENTS
-
-### Repeat annotation
-The repeat annotation was performed using [RepeatModeler2](https://github.com/Dfam-consortium/RepeatModeler), to generate a *de novo* species-specific library, and [RepeatMasker](https://github.com/Dfam-consortium/RepeatMasker), to perform the annotation. We complement the species-specific TE library using a curated TE library of snakes previously published <sup>[Castoe et al., 2013](https://doi.org/10.1073/pnas.1314475110)</sup>.
-
-The pipeline with commands and scripts used to perform the repeat annotation is well described in the following tutorial: https://github.com/pedronachtigall/Repeat-annotation-pipeline
 
 
 <details>
