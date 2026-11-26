@@ -68,6 +68,16 @@ GenomeAnnotationWorkshop_2026/
 ## Getting started
 
 ## Repeat annotation
+The repeat annotation identify repetitive DNA, such as transposons and simple repeats, that can inflate substantially the number of false positives in the gene annotation step because repetitive elements often mimic coding signals or attract misleading sequence alignments. To handle such issue, we can soft-mask the genome by indicating repetitive regions with lower case. It allow gene annotation tools to take into account repetitive sequences without losing real coding regions. Soft-masking a genome means to lower case letters that represent repetitive sequences (see the example below). But to soft-mask a genome, we first need to identify the repetitive regions through a step known as repeat annotation.
+
+```
+# genome
+ATCGATCGAAAAAAAAAAAAAAATCGATCGATCG
+
+# soft-masked genome
+ATCGATCGaaaaaaaaaaaaaaaTCGATCGATCG
+```
+
 The repeat annotation can be performed using [RepeatModeler2](https://github.com/Dfam-consortium/RepeatModeler), to generate a *de novo* species-specific library, and [RepeatMasker](https://github.com/Dfam-consortium/RepeatMasker), to perform the annotation. We can complement the species-specific TE library using a curated TE library of snakes previously published ([Castoe et al., 2013](https://doi.org/10.1073/pnas.1314475110)).
 
 This step can take a while. To make our life easier for the workshop, we have made the soft-masked genome available in the data subdirectory (i.e., ```genome.soft.masked.fasta```). But you can give it a try by expanding the section.
