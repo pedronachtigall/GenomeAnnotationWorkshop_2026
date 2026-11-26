@@ -121,7 +121,7 @@ Using Tiberius
 Using GALBA
 
 #### ToxCodAn-Genome
-In our case study, we aim to have a comprehensive and accurate annotation of venom genes. Then, we can take advantage of [ToxCodAn-Genome](https://github.com/pedronachtigall/ToxCodAn-Genome), which is a tool designed specifically to handle the issues related to venom gene annotation ([Nachtigall et al., 2024](https://doi.org/10.1093/gigascience/giad116)).
+In our case study, we aim to have a comprehensive and accurate annotation of venom genes. Then, we can take advantage of [ToxCodAn-Genome](https://github.com/pedronachtigall/ToxCodAn-Genome), which is a tool designed specifically to handle the issues related to venom gene annotation ([Nachtigall et al., 2024](https://doi.org/10.1093/gigascience/giad116)). ToxCodAn-Genome has its own [guide](https://github.com/pedronachtigall/ToxCodAn-Genome/tree/main/Guide) to annotate toxin genes, which can be used as a resource for your future projects. For now, we will keep it a bit simple due to time constraints.
 
 ### Manual inspection of complex regions
 
