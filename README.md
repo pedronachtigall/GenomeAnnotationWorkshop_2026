@@ -26,13 +26,13 @@ By the end of this course, you will be able to:
 
 | Category | Tools Used |
 | :--- | :--- |
-| **Repeat Masking** | `RepeatModeler`, `RepeatMasker` |
-| **Read Alignment** | `HISAT2`, `SAMtools` |
-| **Structural Annotation** | `GALBA`, `Tiberius`, `ToxCodAn-Genome` |
-| **Functional Annotation** | `eggNOG-mapper`, `InterProScan` |
-| **Quality Control & Stats** | `BUSCO`, `AGAT` |
-| **Visualization** | `IGV`, `JBrowse`, `Geneious` (paid) |
-| **Misc** | `BEDtools`, `GFFread`, `miniprot`, `BLAST`, `seqkit` |
+| **Repeat Masking** | RepeatModeler, RepeatMasker |
+| **Read Alignment** | HISAT2, SAMtools |
+| **Structural Annotation** | GALBA, Tiberius, ToxCodAn-Genome |
+| **Functional Annotation** | eggNOG-mapper, InterProScan |
+| **Quality Control & Stats** | BUSCO, AGAT |
+| **Visualization** | IGV, JBrowse, Geneious (paid) |
+| **Misc** | BEDtools, GFFread, miniprot, BLAST, seqkit |
 
 Note: most tools are open-source and freely available.
 
@@ -70,7 +70,7 @@ GenomeAnnotationWorkshop_2026/
 ## Repeat annotation
 The repeat annotation can be performed using [RepeatModeler2](https://github.com/Dfam-consortium/RepeatModeler), to generate a *de novo* species-specific library, and [RepeatMasker](https://github.com/Dfam-consortium/RepeatMasker), to perform the annotation. We can complement the species-specific TE library using a curated TE library of snakes previously published ([Castoe et al., 2013](https://doi.org/10.1073/pnas.1314475110)).
 
-This step can take a while. To make it our life easier for the workshop, we have made the soft-masked genome available in the data subdirectory. But you can give it a try by expanding the section.
+This step can take a while. To make our life easier for the workshop, we have made the soft-masked genome available in the data subdirectory (i.e., ```genome.soft.masked.fasta```). But you can give it a try by expanding the section.
 
 <details>
 <summary>Expand "Repeat masking" </summary>
