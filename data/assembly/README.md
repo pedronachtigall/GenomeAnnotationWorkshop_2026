@@ -11,4 +11,7 @@ samtools faidx Binsularis_primary_chromosomes.fasta "Binsu_mi-4" > Binsu_mi-4.fa
 
 cat Binsu_mi-1.fasta Binsu_mi-4.fasta > genome.fasta
 gzip genome.fasta
+
+#soft-mask genome using the repeat annotation
+bedtools maskfasta -soft -fi genome.fasta -bed ../annotation_reference/repeat_annotation.gff -fo genome.soft.masked.fasta
 ```
