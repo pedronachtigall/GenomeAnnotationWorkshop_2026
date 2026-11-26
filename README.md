@@ -48,7 +48,10 @@ To make it easier for the workshop, most files were previously subset and are in
 GenomeAnnotationWorkshop_2026/
 ├── data/
     ├── assembly/               # Input genome assembly (.fasta)
-    |   └── genome.fasta
+    |   └── genome.fasta.gz
+    ├── annotation_reference/   # Folder containing annotation files to be used as reference (compare with the results obtained by the workshop)
+    |   ├── gene_annotation.gtf.gz
+    |   └── repeat_annotation.gff.gz
     ├── rnaseq/                 # Paired-end RNA-seq reads (.fastq.gz)
     |   ├── VG_R1.fastq.gz
     |   ├── VG_R2.fastq.gz
