@@ -57,13 +57,12 @@ GenomeAnnotationWorkshop_2026/
     ├── rnaseq/                 # Paired-end RNA-seq reads (.fastq.gz)
     |   ├── VG_R1.fastq.gz
     |   ├── VG_R2.fastq.gz
-    |   ├── Liver_R1.fastq.gz
-    |   └── Liver_R2.fastq.gz
+    |   ├── Spleen_R1.fastq.gz
+    |   └── Spleen_R2.fastq.gz
     └── proteins/               # Reference protein database (.fasta)
         └── protein.fasta
 ```
  - The data is based on real sources and it was subset for teaching reasons. Remember that it is not completed. 
-
 
 ## Getting started
 
@@ -119,6 +118,26 @@ Using Tiberius
 #### evidence-based
 
 Using GALBA
+
+We will use RNA-seq evidence from two tissues for this tutorial, but using more tissues is recommended to improve the gene annotation. Specifically, we will use RNA-seq obtained from venom gland and spleen tissues. You can check all other RNA-seq data available for our model species [here](https://github.com/pedronachtigall/Binsularis_genome/tree/main#estimate-expression-level), if you want to give it a try with more datasets.
+
+The raw data data we used to generate the files for the case study are listed below:
+| Sample ID | Data type | NCBI accession |
+| :-------- | :-------: | :------------: | 
+| SB1851_VG_rna  | RNA-seq | SRR32358140 |
+| SB1851_Spleen_rna  | RNA-seq | SRR32358149 |
+
+```
+# index the genome
+
+# map reads
+
+# retrieve transcripts
+
+# predict CDSs
+```
+
+
 
 #### ToxCodAn-Genome
 In our case study, we aim to have a comprehensive and accurate annotation of venom genes. Then, we can take advantage of [ToxCodAn-Genome](https://github.com/pedronachtigall/ToxCodAn-Genome), which is a tool designed specifically to handle the issues related to venom gene annotation ([Nachtigall et al., 2024](https://doi.org/10.1093/gigascience/giad116)). ToxCodAn-Genome has its own [guide](https://github.com/pedronachtigall/ToxCodAn-Genome/tree/main/Guide) to annotate toxin genes, which can be used as a resource for your future projects. For now, we will keep it a bit simple due to time constraints.
