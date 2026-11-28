@@ -57,8 +57,8 @@ GenomeAnnotationWorkshop_2026/
     ├── rnaseq/                 # Paired-end RNA-seq reads (.fastq.gz)
     |   ├── VG_R1.fastq.gz
     |   ├── VG_R2.fastq.gz
-    |   ├── Spleen_R1.fastq.gz
-    |   └── Spleen_R2.fastq.gz
+    |   ├── Kidney_R1.fastq.gz
+    |   └── Kidney_R2.fastq.gz
     └── proteins/               # Reference protein database (.fasta)
         └── protein.fasta
 ```
@@ -119,13 +119,13 @@ Using Tiberius
 
 Using GALBA
 
-We will use RNA-seq evidence from two tissues for this tutorial, but using more tissues is recommended to improve the gene annotation. Specifically, we will use RNA-seq obtained from venom gland and spleen tissues. You can check all other RNA-seq data available for our model species [here](https://github.com/pedronachtigall/Binsularis_genome/tree/main#estimate-expression-level), if you want to give it a try with more datasets.
+We will use RNA-seq evidence from two tissues for this tutorial, but using more tissues is recommended to improve the gene annotation. Specifically, we will use RNA-seq obtained from venom gland and kidney tissues. You can check all other RNA-seq data available for our model species [here](https://github.com/pedronachtigall/Binsularis_genome/tree/main#estimate-expression-level), if you want to give it a try with more datasets.
 
 The raw data data we used to generate the files for the case study are listed below:
 | Sample ID | Data type | NCBI accession |
 | :-------- | :-------: | :------------: | 
-| SB1851_VG_rna  | RNA-seq | SRR32358140 |
-| SB1851_Spleen_rna  | RNA-seq | SRR32358149 |
+| SB1851_VG_rna | RNA-seq | SRR32358140 |
+| SB1851_Kidney_rna | RNA-seq | SRR32358148 |
 
 ```
 # index the genome
